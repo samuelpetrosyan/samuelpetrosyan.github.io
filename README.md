@@ -1,5 +1,9 @@
 # Սամուել Պետրոսյան, ՔՀԾ-88
 
+- [Խնդիր 154](https://github.com/samuelpetrosyan/samuelpetrosyan.github.io#խնդիր-154)
+
+
+
 ### Խնդիր 154
 
 ![image](https://user-images.githubusercontent.com/62112092/133244133-000429cf-a600-4934-97d9-b7d16dff05ab.png)
