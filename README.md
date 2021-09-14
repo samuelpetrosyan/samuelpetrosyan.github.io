@@ -1,4 +1,4 @@
-## Welcome to Samuel Petrosyan's Page
+# Սամուել Պետրոսյան, ՔՀԾ-88
 
 ### Խնդիր 154
 
