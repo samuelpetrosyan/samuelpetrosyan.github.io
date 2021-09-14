@@ -43,4 +43,4 @@ button_sum = Button(root, relief=RIDGE, borderwidth=1, text="Submit", padx=3, pa
 button_sum.grid(row=0, column=4, padx=10, pady=10)
 
 root.mainloop()
-՝՝՝
+```
