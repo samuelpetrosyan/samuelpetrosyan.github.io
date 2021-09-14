@@ -1,37 +1,46 @@
 ## Welcome to Samuel Petrosyan's Page
 
-You can use the [editor on GitHub](https://github.com/samuelpetrosyan/samuelpetrosyan.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+### Խնդիր 154
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![image](https://user-images.githubusercontent.com/62112092/133244133-000429cf-a600-4934-97d9-b7d16dff05ab.png)
 
-### Markdown
+![image](https://user-images.githubusercontent.com/62112092/133244164-c1392a82-70cc-4ea6-83e7-c9402bc96739.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
+import math
+from tkinter import *
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+root = Tk()
+root.title("Սամուել - Խնդիր 154")
+root.resizable(False, False)
+root.attributes("-toolwindow", 1)
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/samuelpetrosyan/samuelpetrosyan.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+def only_numbers(char):
+    return char.isdigit()
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+def button_click():
+    if e.get() != '':
+        n = int(e.get())
+        message = []
+        for i in range(1, n):
+            if math.remainder(n, i) == 3.0:
+                message.append(i)
+    else:
+        return
+
+    listbox = Listbox(root, relief=GROOVE, listvariable=StringVar(value=message))
+    listbox.grid(row=1, column=0, columnspan=3, padx=10, pady=10)
+
+
+validation = root.register(only_numbers)
+
+e = Entry(root, relief=GROOVE, width=20, borderwidth=1, validate="key", validatecommand=(validation, '%S'))
+e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
+
+button_sum = Button(root, relief=RIDGE, borderwidth=1, text="Submit", padx=3, pady=0, fg='#fff', bg='#a74a6d', command=lambda: button_click())
+button_sum.grid(row=0, column=4, padx=10, pady=10)
+
+root.mainloop()
+՝՝՝
