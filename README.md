@@ -103,7 +103,7 @@ root.mainloop()
 ### Խնդիր 174
 
 ![image](https://user-images.githubusercontent.com/62112092/133278494-d20b417d-06d8-473c-a06c-5d795feaa079.png)
-
+*174
 ![image](https://user-images.githubusercontent.com/62112092/133278534-3c109c09-ffd1-4c45-b182-fbfdbd1dadfa.png)
 
 Py3
@@ -111,7 +111,7 @@ Py3
 from tkinter import *
 
 root = Tk()
-root.title("Սամուել - Խնդիր 164")
+root.title("Սամուել - Խնդիր 174")
 root.resizable(False, False)
 root.attributes("-toolwindow", 1)
 
