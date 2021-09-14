@@ -6,8 +6,7 @@
 
 ![image](https://user-images.githubusercontent.com/62112092/133244164-c1392a82-70cc-4ea6-83e7-c9402bc96739.png)
 
-```
-import math
+```import math
 from tkinter import *
 
 root = Tk()
@@ -42,5 +41,4 @@ e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 button_sum = Button(root, relief=RIDGE, borderwidth=1, text="Submit", padx=3, pady=0, fg='#fff', bg='#a74a6d', command=lambda: button_click())
 button_sum.grid(row=0, column=4, padx=10, pady=10)
 
-root.mainloop()
-```
+root.mainloop()```
