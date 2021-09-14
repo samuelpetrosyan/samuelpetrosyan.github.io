@@ -5,7 +5,7 @@
 - [x] [Խնդիր 174](#խնդիր-174)
 - [x] [Խնդիր 184](#խնդիր-184)
 - [x] [Խնդիր 194](#խնդիր-194)
-- [ ] [Խնդիր 204](#խնդիր-204)
+- [x] [Խնդիր 204](#խնդիր-204)
 - [ ] [Խնդիր 214](#խնդիր-214)
 - [ ] [Խնդիր 224](#խնդիր-224)
 - [ ] [Խնդիր 234](#խնդիր-234)
@@ -236,6 +236,56 @@ def button_click():
         return
 
     listbox = Listbox(root, relief=GROOVE, listvariable=StringVar(value=x))
+    listbox.grid(row=1, column=0, columnspan=3, padx=10, pady=10)
+
+
+validation = root.register(only_numbers)
+
+e = Entry(root, relief=GROOVE, width=20, borderwidth=1, validate="key", validatecommand=(validation, '%S'))
+e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
+
+button_sum = Button(root, relief=RIDGE, borderwidth=1, text="Submit", padx=3, pady=0, fg='#fff', bg='#a74a6d', command=lambda: button_click())
+button_sum.grid(row=0, column=4, padx=10, pady=10)
+
+root.mainloop()
+```
+
+
+### Խնդիր 204
+
+![image](https://user-images.githubusercontent.com/62112092/133293864-f207ad71-72a5-4412-b143-affa2bcda040.png)
+![image](https://user-images.githubusercontent.com/62112092/133293891-56ca6fe2-e9fd-47d8-b2b9-30bfb3c98b1c.png)
+
+![image](https://user-images.githubusercontent.com/62112092/133293800-03cadf58-c728-4bec-88dc-58b671abb34c.png)
+
+Py3
+```py
+import math
+from tkinter import *
+
+root = Tk()
+root.title("Սամուել - Խնդիր 204")
+root.resizable(False, False)
+root.attributes("-toolwindow", 1)
+
+
+def only_numbers(char):
+    return char.isdigit()
+
+
+def button_click():
+    if e.get() != '':
+        n = int(e.get())
+        message = []
+
+        while n != 0:
+            n = round(n / 10, 1)
+            message.append(int((round(math.modf(n)[0], 1) * 10)))
+            n = int(n)
+    else:
+        return
+
+    listbox = Listbox(root, relief=GROOVE, listvariable=StringVar(value=message))
     listbox.grid(row=1, column=0, columnspan=3, padx=10, pady=10)
 
 
