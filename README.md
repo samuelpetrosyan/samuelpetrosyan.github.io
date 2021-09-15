@@ -299,3 +299,39 @@ button_sum.grid(row=0, column=4, padx=10, pady=10)
 
 root.mainloop()
 ```
+
+### Խնդիր 214
+
+![image](https://user-images.githubusercontent.com/62112092/133389371-23264528-ff89-4b43-8840-8109e3f9426a.png)
+![image](https://user-images.githubusercontent.com/62112092/133389381-88081e64-849f-4280-9275-92e1632d1338.png)
+
+![image](https://user-images.githubusercontent.com/62112092/133389338-a3768fac-4024-4a56-aeb3-b455a652af5b.png)
+
+
+```vb
+Dim n%, cnt%, gen%
+
+Dim mass() As Integer
+
+Private Sub Command1_Click()
+n = Val(InputBox("n="))
+ReDim mass(1 To n)
+
+For i = 1 To n
+mass(i) = InputBox("Enter a digit - " & i)
+Next
+cnt = 0
+gen = 0
+For i = 1 To n
+If mass(i) < 0 Then
+cnt = cnt + 1
+gen = gen + mass(i)
+End If
+Next
+result.Text = gen / cnt
+End Sub
+
+Private Sub n_Change()
+
+End Sub
+```
