@@ -7,7 +7,7 @@
 - [x] [Խնդիր 194](#խնդիր-194)
 - [x] [Խնդիր 204](#խնդիր-204)
 - [x] [Խնդիր 214](#խնդիր-214)
-- [ ] [Խնդիր 224](#խնդիր-224)
+- [x] [Խնդիր 224](#խնդիր-224)
 - [ ] [Խնդիր 234](#խնդիր-234)
 - [ ] [Խնդիր 244](#խնդիր-244)
 
@@ -307,7 +307,7 @@ root.mainloop()
 
 ![image](https://user-images.githubusercontent.com/62112092/133389338-a3768fac-4024-4a56-aeb3-b455a652af5b.png)
 
-
+VB
 ```vb
 Dim n%, cnt%, gen%
 
@@ -330,8 +330,37 @@ End If
 Next
 result.Text = gen / cnt
 End Sub
+```
 
-Private Sub n_Change()
+### Խնդիր 224
 
+![image](https://user-images.githubusercontent.com/62112092/133389371-23264528-ff89-4b43-8840-8109e3f9426a.png)
+![image](https://user-images.githubusercontent.com/62112092/133396864-cfe41b43-42fa-4248-8c60-d31fb7f177a3.png)
+ 
+![image](https://user-images.githubusercontent.com/62112092/133396391-f8a1c9d0-50b2-49ac-bb5f-ebd211b071ae.png)
+
+VB
+```vb
+Dim n%, gen%
+
+Dim mass() As Integer
+
+Private Sub Command1_Click()
+n = Val(InputBox("n="))
+k = Val(InputBox("k="))
+ReDim mass(1 To n)
+
+For i = 1 To n
+mass(i) = InputBox("Enter a digit - " & i)
+Next
+
+gen = 0
+
+For i = 1 To n
+If Abs(mass(i)) < k Then
+gen = gen + mass(i) ^ 3
+End If
+Next
+result.Text = gen
 End Sub
 ```
