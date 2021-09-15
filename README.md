@@ -364,3 +364,41 @@ Next
 result.Text = gen
 End Sub
 ```
+
+### Խնդիր 234
+
+![image](https://user-images.githubusercontent.com/62112092/133389371-23264528-ff89-4b43-8840-8109e3f9426a.png)
+![image](https://user-images.githubusercontent.com/62112092/133398929-97730365-5b16-4bf9-9117-493a38159eac.png)
+ 
+![image](https://user-images.githubusercontent.com/62112092/133398896-c89463f3-582d-4487-b68b-2499d5ed3c6b.png)
+
+
+VB
+```vb
+Dim n%, gen%, cnt%
+
+Dim mass() As Integer
+
+Private Sub Command1_Click()
+n = Val(InputBox("n="))
+ReDim mass(1 To n)
+
+For i = 1 To n
+mass(i) = InputBox("Enter a digit - " & i)
+Next
+
+gen = 0
+cnt = 0
+For i = 1 To n
+
+If Not mass(i) Mod 2 = 0 Then
+gen = gen + mass(i)
+cnt = cnt + 1
+End If
+
+Next
+
+result.Text = gen / cnt
+
+End Sub
+```
