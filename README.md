@@ -13,6 +13,110 @@
 
 
 
+## Խնդիր 214
+
+![image](https://user-images.githubusercontent.com/62112092/133389371-23264528-ff89-4b43-8840-8109e3f9426a.png)
+![image](https://user-images.githubusercontent.com/62112092/133389381-88081e64-849f-4280-9275-92e1632d1338.png)
+
+![image](https://user-images.githubusercontent.com/62112092/133389338-a3768fac-4024-4a56-aeb3-b455a652af5b.png)
+
+VB
+```vb
+Dim n%, cnt%, gen%
+
+Dim mass() As Integer
+
+Private Sub Command1_Click()
+n = Val(InputBox("n="))
+ReDim mass(1 To n)
+
+For i = 1 To n
+mass(i) = InputBox("Enter a digit - " & i)
+Next
+cnt = 0
+gen = 0
+For i = 1 To n
+If mass(i) < 0 Then
+cnt = cnt + 1
+gen = gen + mass(i)
+End If
+Next
+result.Text = gen / cnt
+End Sub
+```
+
+## Խնդիր 224
+
+![image](https://user-images.githubusercontent.com/62112092/133389371-23264528-ff89-4b43-8840-8109e3f9426a.png)
+![image](https://user-images.githubusercontent.com/62112092/133396864-cfe41b43-42fa-4248-8c60-d31fb7f177a3.png)
+ 
+![image](https://user-images.githubusercontent.com/62112092/133396391-f8a1c9d0-50b2-49ac-bb5f-ebd211b071ae.png)
+
+VB
+```vb
+Dim n%, gen%
+
+Dim mass() As Integer
+
+Private Sub Command1_Click()
+n = Val(InputBox("n="))
+k = Val(InputBox("k="))
+ReDim mass(1 To n)
+
+For i = 1 To n
+mass(i) = InputBox("Enter a digit - " & i)
+Next
+
+gen = 0
+
+For i = 1 To n
+If Abs(mass(i)) < k Then
+gen = gen + mass(i) ^ 3
+End If
+Next
+result.Text = gen
+End Sub
+```
+
+## Խնդիր 234
+
+![image](https://user-images.githubusercontent.com/62112092/133389371-23264528-ff89-4b43-8840-8109e3f9426a.png)
+![image](https://user-images.githubusercontent.com/62112092/133398929-97730365-5b16-4bf9-9117-493a38159eac.png)
+ 
+![image](https://user-images.githubusercontent.com/62112092/133398896-c89463f3-582d-4487-b68b-2499d5ed3c6b.png)
+
+
+VB
+```vb
+Dim n%, gen%, cnt%
+
+Dim mass() As Integer
+
+Private Sub Command1_Click()
+n = Val(InputBox("n="))
+ReDim mass(1 To n)
+
+For i = 1 To n
+mass(i) = InputBox("Enter a digit - " & i)
+Next
+
+gen = 0
+cnt = 0
+For i = 1 To n
+
+If Not mass(i) Mod 2 = 0 Then
+gen = gen + mass(i)
+cnt = cnt + 1
+End If
+
+Next
+
+result.Text = gen / cnt
+
+End Sub
+```
+
+
 ## Խնդիր 154.0
 
 ![image](https://user-images.githubusercontent.com/62112092/133399526-bad8f466-acac-418f-b7f0-adb3cb0dd539.png)
@@ -358,107 +462,4 @@ button_sum = Button(root, relief=RIDGE, borderwidth=1, text="Submit", padx=3, pa
 button_sum.grid(row=0, column=4, padx=10, pady=10)
 
 root.mainloop()
-```
-
-## Խնդիր 214
-
-![image](https://user-images.githubusercontent.com/62112092/133389371-23264528-ff89-4b43-8840-8109e3f9426a.png)
-![image](https://user-images.githubusercontent.com/62112092/133389381-88081e64-849f-4280-9275-92e1632d1338.png)
-
-![image](https://user-images.githubusercontent.com/62112092/133389338-a3768fac-4024-4a56-aeb3-b455a652af5b.png)
-
-VB
-```vb
-Dim n%, cnt%, gen%
-
-Dim mass() As Integer
-
-Private Sub Command1_Click()
-n = Val(InputBox("n="))
-ReDim mass(1 To n)
-
-For i = 1 To n
-mass(i) = InputBox("Enter a digit - " & i)
-Next
-cnt = 0
-gen = 0
-For i = 1 To n
-If mass(i) < 0 Then
-cnt = cnt + 1
-gen = gen + mass(i)
-End If
-Next
-result.Text = gen / cnt
-End Sub
-```
-
-## Խնդիր 224
-
-![image](https://user-images.githubusercontent.com/62112092/133389371-23264528-ff89-4b43-8840-8109e3f9426a.png)
-![image](https://user-images.githubusercontent.com/62112092/133396864-cfe41b43-42fa-4248-8c60-d31fb7f177a3.png)
- 
-![image](https://user-images.githubusercontent.com/62112092/133396391-f8a1c9d0-50b2-49ac-bb5f-ebd211b071ae.png)
-
-VB
-```vb
-Dim n%, gen%
-
-Dim mass() As Integer
-
-Private Sub Command1_Click()
-n = Val(InputBox("n="))
-k = Val(InputBox("k="))
-ReDim mass(1 To n)
-
-For i = 1 To n
-mass(i) = InputBox("Enter a digit - " & i)
-Next
-
-gen = 0
-
-For i = 1 To n
-If Abs(mass(i)) < k Then
-gen = gen + mass(i) ^ 3
-End If
-Next
-result.Text = gen
-End Sub
-```
-
-## Խնդիր 234
-
-![image](https://user-images.githubusercontent.com/62112092/133389371-23264528-ff89-4b43-8840-8109e3f9426a.png)
-![image](https://user-images.githubusercontent.com/62112092/133398929-97730365-5b16-4bf9-9117-493a38159eac.png)
- 
-![image](https://user-images.githubusercontent.com/62112092/133398896-c89463f3-582d-4487-b68b-2499d5ed3c6b.png)
-
-
-VB
-```vb
-Dim n%, gen%, cnt%
-
-Dim mass() As Integer
-
-Private Sub Command1_Click()
-n = Val(InputBox("n="))
-ReDim mass(1 To n)
-
-For i = 1 To n
-mass(i) = InputBox("Enter a digit - " & i)
-Next
-
-gen = 0
-cnt = 0
-For i = 1 To n
-
-If Not mass(i) Mod 2 = 0 Then
-gen = gen + mass(i)
-cnt = cnt + 1
-End If
-
-Next
-
-result.Text = gen / cnt
-
-End Sub
 ```
